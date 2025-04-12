@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: courier-route-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app"
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///db.sqlite3
+      - key: SESSION_SECRET
+        value: super_secret_key
+      - key: OPENROUTE_API_KEY
+        value: your_openroute_api_key
+      - key: WEATHER_API_KEY
+        value: your_weather_api_key
