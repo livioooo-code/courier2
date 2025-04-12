@@ -5,6 +5,8 @@ import config
 from route_optimizer import optimize_route, geocode_address, get_route_details
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
+from app import app
+
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
